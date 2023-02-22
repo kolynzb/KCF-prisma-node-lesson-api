@@ -9,6 +9,7 @@
 - [Express Crash Course](https://www.youtube.com/watch?v=SccSCuHhOw0)
 - [Middleware Basics Course](https://www.youtube.com/watch?v=lY6icfhap2o)
 - [Prisma tutorial](https://youtu.be/RebA5J-rlwg)
+- [PostgresSQl](https://youtu.be/fZQI7nBu32M)
 
 # Prerequities
 
@@ -16,6 +17,11 @@
 - [Node Crash Course](https://www.youtube.com/watch?v=TlB_eWDSMt4&t=552s)
 
 - Move to Lesson on branch `L2-prisma-node`
+
+# Resources
+
+- [Postgres cheat sheet](https://postgrescheatsheet.com/#/tables)
+- [Postgres cheat sheet](https://quickref.me/postgres)
 
 # Lesson 2
 
