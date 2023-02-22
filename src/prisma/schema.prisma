@@ -9,3 +9,31 @@ datasource db {
   provider = "postgresql" // where data is comming from
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id String @id @unique @default(uuid())
+  email String
+  writtenPosts Post[]  @relation("WrittenPosts")
+  bookmarkedPosts Post[] @relation("BookmarkedPosts")
+  userPreference UserPreference?
+}
+
+model UserPreference {
+  id String @id @default(uuid())
+  emailUpdates Boolean //Designated wether a user wants to receive emails.
+  user User @relation(fields: [userId], references:[id]) 
+  userId String @unique // only one reference to user
+}
+model Post{
+  id String @id @unique @default(uuid()) // uuid field
+  author User @relation("WrittenPosts",fields: [authorId], references:[id]) 
+  authorId String
+  bookmarkedBy User @relation("BookmarkedPosts",fields: [bookmarkedById], references:[id]) 
+  bookmarkedById String
+  categories PostCategory[]
+}
+
+model PostCategory{
+  id String @id  @default(uuid()) 
+posts Post[]
+}
