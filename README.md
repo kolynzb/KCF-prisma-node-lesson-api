@@ -19,10 +19,9 @@
 - Move to Lesson on branch `L2-prisma-node`
 
 # Resources
-
 - [Postgres cheat sheet](https://postgrescheatsheet.com/#/tables)
 - [Postgres cheat sheet](https://quickref.me/postgres)
-
+- [Erd Diagram](https://drawsql.app/teams/kolynz/diagrams/kcf-trials)
 # Lesson 2
 
 - install Prisma CLI
