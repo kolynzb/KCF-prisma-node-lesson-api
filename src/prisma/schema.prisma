@@ -37,3 +37,23 @@ model PostCategory{
   id String @id  @default(uuid()) 
 posts Post[]
 }
+
+
+model Artist {
+  id String @id  @default(uuid()) 
+  name String
+  email String @unique
+  bio String?
+  songs Song[]
+}
+
+model Song {
+  id String @id  @default(uuid()) 
+  title String
+  content String
+  released Boolean @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  artist Artist @relation(fields:[artistId], references: [id])
+  artistId String
+}
