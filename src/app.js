@@ -2,17 +2,22 @@ import express from "express";
 
 import userRouter from "./routes/user.route.js";
 import productRouter from "./routes/product.route.js";
+import artistRouter from "./routes/artist.route.js";
 
 const app = express();
 
-app.use("static", express.static("./src/public"));
+app.use("/static", express.static("./src/public"));
 
+app.use(express.json());
 app.use("/users", userRouter);
 app.use("/products", productRouter);
+app.use("/artists", artistRouter);
 
+app.set("views", "./src/views/pages/");
 app.set("view engine", "pug");
 
-app.get("/", (req, res) => {course
+app.get("/", (req, res) => {
+  course;
   res.statusCode = 200;
   res.render("index");
 });
